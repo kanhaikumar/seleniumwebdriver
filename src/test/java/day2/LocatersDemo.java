@@ -23,8 +23,23 @@ public class LocatersDemo {
     // driver.findElement(By.linkText("Tablets")).click();
     // driver.findElement(By.partialLinkText("ets")).click();
     //FIND SIMIAR HOW MANY LIKS ARE THERE IN HEADER?
-    List<WebElement> headerLinks=driver.findElements(By.className("list-inline-item"));
-    System.out.print("total number of header links:"+headerLinks.size());
+    //List<WebElement> headerLinks=driver.findElements(By.className("list-inline-item"));
+    //System.out.print("total number of header links:"+headerLinks.size());
+     
+     //tagname
+     List<WebElement>links=driver.findElements(By.tagName("a"));
+     System.out.println("total number of links : "+links.size());
+     for (WebElement link : links) {
+    	    // Print the text of the link
+    	    System.out.println("Link Text: " + link.getText());
+    	    
+    	    // Print the URL of the link
+    	    System.out.println("Link URL: " + link.getAttribute("href"));
+    	}
+     //find all image 
+     //List<WebElement>images=driver.findElements(By.tagName("img"));
+     //System.out.println("total number of images: "+images.size());
+     
      
 	}
 
